@@ -12,7 +12,7 @@ app.set("view engine", "ejs");
 
 // khai báo route
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello World with pakage Nodemon sdasd!");
 });
 
 app.get("/new", (req, res) => {
