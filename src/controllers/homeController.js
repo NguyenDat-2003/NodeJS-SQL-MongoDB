@@ -1,18 +1,19 @@
-const Pool = require("mysql2/typings/mysql/lib/Pool");
 const connection = require("../config/database");
+const { getAllUser } = require("../services/CRUDServices");
 
-const getHomePage = (req, res) => {
-  return res.render("home.ejs");
+const getHomePage = async (req, res) => {
+  let results = await getAllUser();
+  return res.render("home.ejs", { listUsers: results });
 };
 const getNewPage = (req, res) => {
   return res.render("sample.ejs");
 };
 const postCreateUser = async (req, res) => {
-  let email = req.body.email;
-  let name = req.body.name;
-  let city = req.body.city;
+  // let email = req.body.email;
+  // let name = req.body.name;
+  // let city = req.body.city;
 
-  // let { email, name, city } = req.body;
+  let { email, name, city } = req.body;
 
   // connection.query(
   //   // Truyền động data từ form đến db bằng dấu ?

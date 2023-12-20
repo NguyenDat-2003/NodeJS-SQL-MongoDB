@@ -14,8 +14,8 @@
         <a href="/create">Create</a>
         <a href="/new">News</a>
     </div>
-
     <div class="container" style="padding: 10px 20px;">
+        <!-- <%= JSON.stringify(listUsers) %> -->
         <h2>List Users</h2>
 
         <table class="w3-table-all w3-hoverable">
@@ -25,23 +25,31 @@
                     <th>Email</th>
                     <th>Name</th>
                     <th>City</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
-            <tr>
-                <td>Jill</td>
-                <td>Smith</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>Eve</td>
-                <td>Jackson</td>
-                <td>94</td>
-            </tr>
-            <tr>
-                <td>Adam</td>
-                <td>Johnson</td>
-                <td>67</td>
-            </tr>
+            <% listUsers.forEach(function(user, index) { %>
+                <tr>
+                    <td>
+                        <%= index + 1 %>
+                    </td>
+                    <td>
+                        <%= user.email %>
+                    </td>
+                    <td>
+                        <%= user.name %>
+                    </td>
+                    <td>
+                        <%= user.city %>
+                    </td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <% }); %>
+
+
         </table>
     </div>
 </body>
