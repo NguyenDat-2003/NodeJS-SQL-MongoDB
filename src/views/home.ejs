@@ -4,38 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Home Page</title>
 </head>
 
 <body>
     <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <a class="active" href="/">Home</a>
+        <a href="/create">Create</a>
+        <a href="/new">News</a>
     </div>
-    <div class="form-add-new">
-        <form action="/create" method="post">
-            <fieldset>
-                <legend>Add user</legend>
-                <div class="input-group">
-                    <label for="">Email:</label>
-                    <input type="text" name="email">
-                </div>
-                <div class="input-group">
-                    <label for="">Name:</label>
-                    <input type="text" name="name">
-                </div>
-                <div class="input-group">
-                    <label for="">City:</label>
-                    <input type="text" name="city">
-                </div>
-                <div>
-                    <button>Save</button>
-                </div>
-            </fieldset>
-        </form>
 
+    <div class="container" style="padding: 10px 20px;">
+        <h2>List Users</h2>
+
+        <table class="w3-table-all w3-hoverable">
+            <thead>
+                <tr class="w3-light-blue">
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>Adam</td>
+                <td>Johnson</td>
+                <td>67</td>
+            </tr>
+        </table>
     </div>
 </body>
 
