@@ -5,4 +5,14 @@ const getAllUser = async () => {
   return results;
 };
 
-module.exports = { getAllUser };
+const getUserById = async (userID) => {
+  let [results, fields] = await connection.query(
+    "Select * From Users Where id = ?",
+    [userID]
+  );
+  let user = results && results.length > 0 ? results[0] : {};
+
+  return user;
+};
+
+module.exports = { getAllUser, getUserById };
