@@ -43,8 +43,12 @@
                         <%= user.city %>
                     </td>
                     <td>
+                        <!-- Thẻ a tương ứng với method GET -->
                         <a href="/edit/<%= user.id %>">Edit</a>
-                        <button>Delete</button>
+
+                        <form action="/delete-user/<%= user.id %>" method="POST">
+                            <button>Delete</button>
+                        </form>
                     </td>
                 </tr>
                 <% }); %>
